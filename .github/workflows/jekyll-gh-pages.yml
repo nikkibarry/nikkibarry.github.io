@@ -28,6 +28,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Update packages
+        run: sudo apt-get update
+      - name: Install plantuml
+        run: sudo apt-get install -y graphviz plantuml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

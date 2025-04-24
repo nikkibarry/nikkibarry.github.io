@@ -1,0 +1,151 @@
+@import url('https://jeffreymaniac.github.io/OpenDyslexic-font-for-css/opendyslexic.css');
+
+$base-color: #ebf0ea;
+$text-color: #1d1d1d;
+$line-color: #4fb28f;
+
+$accent-color: rgb(189, 176, 158);
+
+$footer-color: rgb(189, 176, 158);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: OpenDyslexic;
+  line-height: 1.5rem;
+  color: $text-color;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: $base-color;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+  "navbar navbar"
+  "sidebar main"
+  "footer footer"
+}
+
+
+#navbar {
+    top: 0;
+    position: sticky;
+    border-bottom: 1px solid $line-color;
+    background-color: $base-color;
+    grid-area: navbar;
+    margin-bottom: 1em;
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    li {
+      display: flex;
+    }
+
+    .home-li {
+      margin-right: auto;
+    }
+
+    a { 
+      display: flex;
+      color: $text-color;
+      text-decoration: none;
+      padding: 1em 2em;
+      transition: background-color 150ms ease;
+    }
+
+    .active-link {
+      border-bottom: 3px solid $line-color;
+    }
+
+    a:hover {
+      background-color: $accent-color;
+    }
+}
+
+#main {
+  grid-area: main;
+  margin-left: 1em;
+  p {
+    margin-top: .5em;
+    margin-left: .5em;
+  }
+}
+
+#sidebar {
+  display: flex;
+  grid-area: sidebar;
+  border-right: 3px solid $line-color;
+}
+
+.toc {
+  padding: 0.5em 1em;
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    border-radius: .5em;
+    padding: .85em;
+    display: flex;
+    color: $text-color;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 150ms ease;
+    align-items: center;
+  }
+
+  a:hover {
+    background-color: $accent-color;
+  }
+  
+}
+
+footer{
+  margin-top: 1em;
+  grid-area: footer;
+  border-top: 2px solid $line-color;
+  background-color: $footer-color;
+  display: flex;
+
+  div {
+    display: flex;
+    padding: 1em 2em;
+  }
+
+  #social {
+    margin-right: auto;
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    li {
+      display: flex;
+      a {
+        padding-left: 1em;
+      }
+      i {
+        color: $text-color
+      }
+    }
+  }
+
+  #copyright {
+    border-left: 3px solid $line-color;
+  }
+
+  #disclaimer {
+    border-left: 3px solid $line-color;
+  }
+}

@@ -1,0 +1,20 @@
+collections:
+  mainpages:
+    output: true
+    permalink: /:name
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "mainpages"
+    values:
+      layout: "page"
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

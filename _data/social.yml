@@ -1,0 +1,9 @@
+- name: github
+  link: https://github.com/nikkibarry
+  icon: fa-brands fa-square-github fa-2xl
+- name: linkedin
+  link: https://www.linkedin.com/in/nikki-barry-12977026a
+  icon: fa-brands fa-linkedin fa-2xl
+- name: credly
+  link: https://www.credly.com/users/nikki-barry
+  icon: fa-solid fa-certificate fa-2xl
