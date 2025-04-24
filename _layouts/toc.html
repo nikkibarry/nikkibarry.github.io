@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div id="main">
+    {{content}}
+</div>
+<div id="sidebar" class="toc">
+    <div id="toc">
+        <h2>{{page.toc_title}}</h2>
+        <br/>
+        <ul>
+            {% for item in page.toc %}
+            <li>
+                <a href="#{{item.anchor}}">
+                    {{item.heading}}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
